@@ -1,0 +1,71 @@
+//Variables
+@violet:#8c99e0;
+@color-white:#ffff;
+@font-style:serif;
+@Z-index:11;
+@black-color:#000000;	
+
+
+
+// mixins
+.flex{
+  display:flex;
+  flex-direction:row;
+}
+.spaceBetween{
+  justify-content:space-between;
+}
+.justifyContent{
+  display: flex;
+  justify-content:center;
+}
+.margin1{
+  margin:8px;
+}
+.paddingForInpuBase{
+  padding-left: 5%;
+}
+.oreoFont{
+  font-size:"25%";
+}
+
+//CSS
+.mainNavBar {
+  color: @violet;
+  z-index:@Z-index;
+  width:80%;
+}
+.oreoText{
+  color:@color-white;
+}
+.calendarIcon{
+  color:@color-white;
+}
+.appBarContents{
+.flex();
+.spaceBetween();
+}
+.appBarLeftContents{
+  .flex();
+}
+.searchBar{
+  background-color:@color-white;
+  .margin1();
+  .justifyContent();
+  .paddingForInpuBase()
+}
+.searchBarContainer{
+.justifyContent()
+}
+.searchIconInInput{
+color:@black-color;
+}
+.homeContainer{
+  .flex()
+}
+.userContainer{
+  .flex()
+}
+.drawerConteiner{
+  .flex()
+}

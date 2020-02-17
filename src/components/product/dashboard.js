@@ -2,6 +2,7 @@ import React,{Component} from 'react'
 import {withRouter} from "react-router-dom"
 import AppBarComponent from './appBar'
 import Drawer from './drawer'
+import CardsInHome from './cardsComponent'
 class Dashboard extends Component{
     constructor(props){
         super(props);
@@ -17,6 +18,9 @@ class Dashboard extends Component{
                 </div>
                     <div style={{width:"80%"}}>
                 <AppBarComponent/>
+                </div>
+                <div>
+                <CardsInHome/>
                 </div>
             </div>
         )

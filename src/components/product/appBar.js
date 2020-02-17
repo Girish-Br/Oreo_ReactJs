@@ -15,7 +15,7 @@ const theme = createMuiTheme({
     overrides: {
         MuiTypography: {
             root: {
-                margin: "18px"
+                margin: "12px"
             }
         },
         MuiIconButton: {
@@ -49,23 +49,23 @@ class AppBarComponent extends Component {
                         <div className="appBarContents">
                         <div className="appBarLeftContents">
                             <Typography style={{fontSize:20}}>OREO</Typography>
-                            <IconButton><SwapHorizIcon /></IconButton>
+                            <IconButton><SwapHorizIcon style={{ fontSize: 18 }} /></IconButton>
                             <IconButton >
-                                <EventIcon />
+                                <EventIcon style={{ fontSize: 18 }}/>
                             </IconButton>
-                            <IconButton><MailIcon /></IconButton>
-                            <IconButton><RecentActorsIcon /></IconButton>
-                            <IconButton><NotificationsIcon /></IconButton>
-                            <IconButton><FlagIcon /></IconButton>
+                            <IconButton><MailIcon style={{ fontSize: 18 }}/></IconButton>
+                            <IconButton><RecentActorsIcon style={{ fontSize: 18 }}/></IconButton>
+                            <IconButton><NotificationsIcon style={{ fontSize: 18 }}/></IconButton>
+                            <IconButton><FlagIcon style={{ fontSize: 18 }}/></IconButton>
                             <div className="searchBar" style={{borderRadius:25}}>
                             <InputBase placeholder="Search">
-                                <SearchIcon className="searchIconInInput" />
+                                <SearchIcon style={{ fontSize: 18 }} className="searchIconInInput" />
                             </InputBase>
                             </div>
                             </div>
-                            <div>
-                            <IconButton><PowerSettingsNewIcon/></IconButton>
-                            <IconButton><SettingsIcon/></IconButton>
+                            <div className="headerContentRight">
+                            <IconButton><PowerSettingsNewIcon style={{ fontSize: 18 }}/></IconButton>
+                            <IconButton><SettingsIcon style={{ fontSize: 18 }}/></IconButton>
                         </div>
                         </div>
                     </AppBar>

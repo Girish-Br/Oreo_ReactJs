@@ -8,6 +8,8 @@ import NotificationsIcon from '@material-ui/icons/Notifications';
 import SearchIcon from '@material-ui/icons/Search';
 import SwapHorizIcon from '@material-ui/icons/SwapHoriz';
 import PowerSettingsNewIcon from '@material-ui/icons/PowerSettingsNew';
+import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBDropdown,
+    MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBIcon } from "mdbreact";
 import SettingsIcon from '@material-ui/icons/Settings';
 import { Icon, Typography, AppBar, MuiThemeProvider, createMuiTheme, IconButton, InputBase } from '@material-ui/core'
 import "../../less/styles.less"
@@ -25,7 +27,7 @@ const theme = createMuiTheme({
         },
         MuiAppBar:{
             root:{
-                width:"80%",
+                width:"79%",
                 backgroundColor: "#8c99e0"
             },
             colorPrimary: {
@@ -65,7 +67,7 @@ class AppBarComponent extends Component {
                             </div>
                             <div className="headerContentRight">
                             <IconButton><PowerSettingsNewIcon style={{ fontSize: 18 }}/></IconButton>
-                            <IconButton><SettingsIcon style={{ fontSize: 18 }}/></IconButton>
+                            <IconButton><SettingsIcon style={{ fontSize: 18, }}/></IconButton>
                         </div>
                         </div>
                     </AppBar>

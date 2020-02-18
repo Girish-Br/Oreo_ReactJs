@@ -1,7 +1,7 @@
 import React,{Component} from 'react'
 import {withRouter} from "react-router-dom"
 import AppBarComponent from './appBar'
-import Drawer from './drawer'
+import DrawerComponent from './drawer'
 import CardsInHome from './cardsComponent'
 class Dashboard extends Component{
     constructor(props){
@@ -14,13 +14,15 @@ class Dashboard extends Component{
         return(
             <div style={{display:"flex",flexDirection:"row"}}>
                 <div style={{width:"20%"}}>
-                <Drawer/>
+                <DrawerComponent/>
                 </div>
                     <div style={{width:"80%"}}>
+                        <div>
                 <AppBarComponent/>
                 </div>
                 <div>
-                <CardsInHome/>
+                    <CardsInHome/>
+                    </div>
                 </div>
             </div>
         )

@@ -43,5 +43,10 @@ module.exports = {
   devServer: {
     contentBase: './dist',
     historyApiFallback: true
-  }
+  },
+  plugins: [
+    new CopyWebpackPlugin([
+    { from: 'src/assets', to: 'assets' }
+    ]),
+    ],
 };

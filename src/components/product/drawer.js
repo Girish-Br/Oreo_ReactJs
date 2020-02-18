@@ -37,7 +37,7 @@ class DrawerComponent extends Component {
                         <div className="drawerConteiner">
                             <div className="homeContainer">
                                 <HomeIcon style={{ fontSize: 22 }} color="action" />
-                                <Typography>Home</Typography>
+                                <Typography style={{fontFamily:"serif",fontSize:20}}>Home</Typography>
                             </div>
                             <div className="userContainer">
                                 <PersonIcon style={{ fontSize: 22 }} color="action" />

@@ -3,6 +3,8 @@ import { withRouter } from "react-router-dom"
 import "../../less/styles.less"
 import AppsIcon from '@material-ui/icons/Apps';
 import HomeIcon from '@material-ui/icons/Home';
+import Slide from '@material-ui/core/Slide';
+import Chip from '@material-ui/core/Chip';
 import PersonIcon from '@material-ui/icons/Person';
 import SwapVertIcon from '@material-ui/icons/SwapVert';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
@@ -22,24 +24,38 @@ class DrawerComponent extends Component {
     constructor(props) {
         super(props);
         this.state = {
-
+            drawerContent: false,
+            profileContent:false
         }
+    }
+    handleProfileContent(){
+        console.log("safdasgdfsg")
+        this.setState({profileContent:!this.state.profileContent})
+    }
+    handleDrawerContent(){
+        this.setState({drawerContent: !this.state.drawerContent })
     }
     render() {
         return (
             <div >
                 <MuiThemeProvider theme={theme}>
-                <Drawer
-                    variant="persistent"
-                    overflow="auto"
-                    open={true}
-                >
+                    <Drawer
+                        variant="persistent"
+                        overflow="auto"
+                        open={true}
+                    >
                         <div className="drawerConteiner">
-                            <div className="homeContainer">
+                            <div className="homeContainer" onClick={()=>{this.handleDrawerContent}}>
                                 <HomeIcon style={{ fontSize: 22 }} color="action" />
-                                <Typography style={{fontFamily:"serif",fontSize:20}}>Home</Typography>
+                                <Typography style={{ fontFamily: "serif", fontSize: 20 }}>Home</Typography>
                             </div>
-                            <div className="userContainer">
+                            {/* <div className="homeContainer" onClick={this.handleDrawerContent}>
+                            <Chip icon={<HomeIcon/>} label="Home" />
+                            </div>
+                            <div className="userContainer" onClick={this.handleProfileContent}>
+                                <Chip icon={<PersonIcon/>} label="Profile"/>
+                                </div> */}
+                            <div className="userContainer" onClick={this.handleProfileContent}>
                                 <PersonIcon style={{ fontSize: 22 }} color="action" />
                                 <Typography>User</Typography>
 
@@ -86,7 +102,7 @@ class DrawerComponent extends Component {
                                 </div>
                             </div>
                         </div>
-                </Drawer>
+                    </Drawer>
                 </MuiThemeProvider>
             </div>
         )

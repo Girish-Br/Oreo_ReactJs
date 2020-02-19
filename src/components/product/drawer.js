@@ -25,17 +25,109 @@ class DrawerComponent extends Component {
         super(props);
         this.state = {
             drawerContent: false,
-            profileContent:false
+            profileContent: false
         }
+        this.handleDrawerContent = this.handleDrawerContent.bind(this)
+        // this.handleProfileContent = this.handleProfileContent.bind(this)
+
     }
-    handleProfileContent(){
-        console.log("safdasgdfsg")
-        this.setState({profileContent:!this.state.profileContent})
-    }
-    handleDrawerContent(){
-        this.setState({drawerContent: !this.state.drawerContent })
+    // handleProfileContent() {
+    //     console.log("safdasgdfsg")
+    //     this.setState({ profileContent: !this.state.profileContent })
+    // }
+    handleDrawerContent() {
+        this.setState({ drawerContent: !this.state.drawerContent })
     }
     render() {
+        let drawerContent =
+            this.state.drawerContent ? <Slide direction="right" in={true} mountOnEnter unmountOnExit>
+                <div>
+                    <Typography className="mainText">--Main</Typography>
+                    <div className="drawerComponents">
+                        <div className="dashboardAllDrawerContent">
+                            <div className="dashboardDrawerContent">
+                                <Icon color="action"><HomeIcon /></Icon>
+                                <Typography>Dashboard</Typography>
+                            </div>
+                            <div className="drawerArrowContent">
+                                <Icon color="action"><ArrowForwardIosIcon style={{ fontSize: 18 }} /></Icon>
+                            </div>
+                        </div>
+                        <div className="appAllDrawerContainer">
+                            <div className="appDrawerContainer">
+                                <Icon color="action"><AppsIcon /></Icon>
+                                <Typography>App</Typography>
+                            </div>
+                            <div className="drawerArrowContent">
+                                <Icon color="action"><ArrowForwardIosIcon style={{ fontSize: 18 }} /></Icon>
+                            </div>
+                        </div>
+                        <div className="ecommerceAllDrawerContainer">
+                            <div className="ecommerceDrawerContainer">
+                                <Icon color="action"><LocalGroceryStoreIcon /></Icon>
+                                <Typography>E-Commerce</Typography>
+                            </div>
+                            <div className="drawerArrowContent">
+                                <Icon color="action"><ArrowForwardIosIcon style={{ fontSize: 18 }} /></Icon>
+                            </div>
+                        </div>
+                        <div className="uiAllDrawerContainer">
+                            <div className="uiDrawerContainer">
+                                <Icon color="action"><SwapVertIcon /></Icon>
+                                <Typography>User-Interface</Typography>
+                            </div>
+                            <div className="drawerArrowContent">
+                                <Icon color="action"><ArrowForwardIosIcon style={{ fontSize: 18 }} /></Icon>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </Slide>
+                :
+                this.state.profileContent &&
+                <Slide direction="left" in={true} mountOnEnter unmountOnExit>
+                    <div>
+                        <Typography className="mainText">--Main</Typography>
+                        <div className="drawerComponents">
+                            <div className="dashboardAllDrawerContent">
+                                <div className="dashboardDrawerContent">
+                                    <Icon color="action"><HomeIcon /></Icon>
+                                    <Typography>Dashboard</Typography>
+                                </div>
+                                <div className="drawerArrowContent">
+                                    <Icon color="action"><ArrowForwardIosIcon style={{ fontSize: 18 }} /></Icon>
+                                </div>
+                            </div>
+                            <div className="appAllDrawerContainer">
+                                <div className="appDrawerContainer">
+                                    <Icon color="action"><AppsIcon /></Icon>
+                                    <Typography>App</Typography>
+                                </div>
+                                <div className="drawerArrowContent">
+                                    <Icon color="action"><ArrowForwardIosIcon style={{ fontSize: 18 }} /></Icon>
+                                </div>
+                            </div>
+                            <div className="ecommerceAllDrawerContainer">
+                                <div className="ecommerceDrawerContainer">
+                                    <Icon color="action"><LocalGroceryStoreIcon /></Icon>
+                                    <Typography>E-Commerce</Typography>
+                                </div>
+                                <div className="drawerArrowContent">
+                                    <Icon color="action"><ArrowForwardIosIcon style={{ fontSize: 18 }} /></Icon>
+                                </div>
+                            </div>
+                            <div className="uiAllDrawerContainer">
+                                <div className="uiDrawerContainer">
+                                    <Icon color="action"><SwapVertIcon /></Icon>
+                                    <Typography>User-Interface</Typography>
+                                </div>
+                                <div className="drawerArrowContent">
+                                    <Icon color="action"><ArrowForwardIosIcon style={{ fontSize: 18 }} /></Icon>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </Slide>
         return (
             <div >
                 <MuiThemeProvider theme={theme}>
@@ -45,7 +137,7 @@ class DrawerComponent extends Component {
                         open={true}
                     >
                         <div className="drawerConteiner">
-                            <div className="homeContainer" onClick={()=>{this.handleDrawerContent}}>
+                            <div className="homeContainer" onClick={this.handleDrawerContent}>
                                 <HomeIcon style={{ fontSize: 22 }} color="action" />
                                 <Typography style={{ fontFamily: "serif", fontSize: 20 }}>Home</Typography>
                             </div>
@@ -55,53 +147,12 @@ class DrawerComponent extends Component {
                             <div className="userContainer" onClick={this.handleProfileContent}>
                                 <Chip icon={<PersonIcon/>} label="Profile"/>
                                 </div> */}
-                            <div className="userContainer" onClick={this.handleProfileContent}>
+                            <div className="userContainer" onClick={this.handleDrawerContent}>
                                 <PersonIcon style={{ fontSize: 22 }} color="action" />
                                 <Typography>User</Typography>
-
                             </div>
                         </div>
-                        <div>
-                            <Typography className="mainText">--Main</Typography>
-                            <div className="drawerComponents">
-                                <div className="dashboardAllDrawerContent">
-                                    <div className="dashboardDrawerContent">
-                                        <Icon color="action"><HomeIcon /></Icon>
-                                        <Typography>Dashboard</Typography>
-                                    </div>
-                                    <div className="drawerArrowContent">
-                                        <Icon color="action"><ArrowForwardIosIcon style={{ fontSize: 18 }} /></Icon>
-                                    </div>
-                                </div>
-                                <div className="appAllDrawerContainer">
-                                    <div className="appDrawerContainer">
-                                        <Icon color="action"><AppsIcon /></Icon>
-                                        <Typography>App</Typography>
-                                    </div>
-                                    <div className="drawerArrowContent">
-                                        <Icon color="action"><ArrowForwardIosIcon style={{ fontSize: 18 }} /></Icon>
-                                    </div>
-                                </div>
-                                <div className="ecommerceAllDrawerContainer">
-                                    <div className="ecommerceDrawerContainer">
-                                        <Icon color="action"><LocalGroceryStoreIcon /></Icon>
-                                        <Typography>E-Commerce</Typography>
-                                    </div>
-                                    <div className="drawerArrowContent">
-                                        <Icon color="action"><ArrowForwardIosIcon style={{ fontSize: 18 }} /></Icon>
-                                    </div>
-                                </div>
-                                <div className="uiAllDrawerContainer">
-                                    <div className="uiDrawerContainer">
-                                        <Icon color="action"><SwapVertIcon /></Icon>
-                                        <Typography>User-Interface</Typography>
-                                    </div>
-                                    <div className="drawerArrowContent">
-                                        <Icon color="action"><ArrowForwardIosIcon style={{ fontSize: 18 }} /></Icon>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        {drawerContent}
                     </Drawer>
                 </MuiThemeProvider>
             </div>

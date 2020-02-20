@@ -29,7 +29,7 @@ class CardsInHome extends Component {
                <Card 
                     className="cardsInProduct" style={{ margin: "2%", padding: "2%" }}>
                     <div style={{ display: "flex", justifyContent: "center",zIndex:2000 }}>
-                        <img className="imageInDashboard"  onMouseOver={this.handleMouseOver} src={item} width="90%" height="50%" />
+                        <img elevation={4} className="imageInDashboard"  onMouseOver={this.handleMouseOver} src={item} width="90%" height="50%" />
                     </div>
                 </Card>
                     // :

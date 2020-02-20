@@ -3,7 +3,8 @@
 @color-white:#ffff;
 @font-style:serif;
 @Z-index:-5;
-@black-color:#000000f6;	
+@black-color:#000000f6;
+
 
 
 
@@ -44,6 +45,10 @@
   font-weight:500;
   font-family: serif;
 }
+.paddingForDrawerContents{
+  padding-left: 5%;
+  padding-right: 5%;
+}
 
 
 
@@ -74,6 +79,9 @@
   .paddingForInpuBase();
   width: max-content;
 }
+.textAlign{
+  text-align: center;
+}
 .searchBarContainer{
 .justifyContent()
 }
@@ -85,9 +93,15 @@ color:@black-color;
 }
 .homeContainer{
   .alignItems();
+  border: 1px solid #888;
+  border-radius: 30px;
+  .paddingForDrawerContents()
 }
 .userContainer{
-  .alignItems()
+  .alignItems();
+  border: 1px solid #888;
+  border-radius: 30px;
+  .paddingForDrawerContents()
 }
 .drawerConteiner{
   .spaceAround();
@@ -156,4 +170,39 @@ color:@black-color;
   width: 12%;
   height: 25%;
 }
+.slideDrawerContent{
+  transition: 'max-width 0.5s, opacity 0.2s 0.3s';
+  transition-timing-function: ease-in;
+  // margin-top: 4%;
+}
+#iconsInDrawer{
+  color:"#546e7a"
+}
 
+.imageContainerInDrawer{
+.justifyContent();
+}
+.profileTextContainer{
+ justify-content:"center";
+}
+.nameContainer{
+.textAlign()
+}
+.jobContainer{
+  .justifyContent();
+}
+.profileContainerInDrawer{
+  margin-top: 4%;
+}
+.iconsInProfileDrawer{
+  .textAlign()
+}
+.addressContainer{
+  .textAlign()
+}
+.followDataContainer{
+  .spaceAround()
+}
+.followContainer{
+  .textAlign()
+}

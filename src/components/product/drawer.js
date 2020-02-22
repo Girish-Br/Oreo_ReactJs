@@ -35,10 +35,10 @@ class DrawerComponent extends Component {
         super(props);
         this.state = {
             drawerContent: false,
-             profileContent: false
+            profileContent: false
         }
         this.handleDrawerContent = this.handleDrawerContent.bind(this)
-         this.handleProfileContent = this.handleProfileContent.bind(this)
+        this.handleProfileContent = this.handleProfileContent.bind(this)
 
     }
     handleProfileContent() {
@@ -51,7 +51,7 @@ class DrawerComponent extends Component {
     render() {
         let drawerContent = !this.state.drawerContent ?
             <div className="slideDrawerContent">
-                {/* <Slide className="slideDrawerContent" direction="right" in={true} mountOnEnter unmountOnExit> */}
+                <Slide direction="right" in={true} mountOnEnter unmountOnExit>
                     <div>
                         <Typography className="mainText" style={{ color: "#546e7a" }}>--Main</Typography>
                         <div className="drawerComponents">
@@ -63,8 +63,8 @@ class DrawerComponent extends Component {
                                 <div className="drawerArrowContent">
                                     <Icon color="action"><ArrowForwardIosIcon style={{ fontSize: 14 }} /></Icon>
                                 </div>
-                            </div>
-                            <div className="appAllDrawerContainer">
+                            </div> 
+                             <div className="appAllDrawerContainer">
                                 <div className="appDrawerContainer">
                                     <Icon color="action"><AppsIcon style={{ fontSize: 18 }} /></Icon>
                                     <Typography style={{ color: "#546e7a" }}>App</Typography>
@@ -72,66 +72,67 @@ class DrawerComponent extends Component {
                                 <div className="drawerArrowContent">
                                     <Icon color="action"><ArrowForwardIosIcon style={{ fontSize: 14 }} /></Icon>
                                 </div>
+                                </div>
+                        <div className="ecommerceAllDrawerContainer">
+                            <div className="ecommerceDrawerContainer">
+                                <Icon color="action"><LocalGroceryStoreIcon style={{ fontSize: 18 }} /></Icon>
+                                <Typography style={{ color: "#546e7a" }}>E-Commerce</Typography>
                             </div>
-                            <div className="ecommerceAllDrawerContainer">
-                                <div className="ecommerceDrawerContainer">
-                                    <Icon color="action"><LocalGroceryStoreIcon style={{ fontSize: 18 }} /></Icon>
-                                    <Typography style={{ color: "#546e7a" }}>E-Commerce</Typography>
-                                </div>
-                                <div className="drawerArrowContent">
-                                    <Icon color="action"><ArrowForwardIosIcon style={{ fontSize: 14 }} /></Icon>
-                                </div>
+                            <div className="drawerArrowContent">
+                                <Icon color="action"><ArrowForwardIosIcon style={{ fontSize: 14 }} /></Icon>
                             </div>
-                            <div className="uiAllDrawerContainer">
-                                <div className="uiDrawerContainer">
-                                    <Icon color="action"><SwapVertIcon style={{ fontSize: 18 }} /></Icon>
-                                    <Typography style={{ color: "#546e7a" }}>User-Interface</Typography>
-                                </div>
-                                <div className="drawerArrowContent">
-                                    <Icon color="action"><ArrowForwardIosIcon style={{ fontSize: 14 }} /></Icon>
-                                </div>
+                        </div>
+                        <div className="uiAllDrawerContainer">
+                            <div className="uiDrawerContainer">
+                                <Icon color="action"><SwapVertIcon style={{ fontSize: 18 }} /></Icon>
+                                <Typography style={{ color: "#546e7a" }}>User-Interface</Typography>
+                            </div>
+                            <div className="drawerArrowContent">
+                                <Icon color="action"><ArrowForwardIosIcon style={{ fontSize: 14 }} /></Icon>
                             </div>
                         </div>
                     </div>
-                {/* </Slide> */}
-            </div>
+                    </div>
+                </Slide>
+            </div >
             :
-            <div className="slideDrawerContent" >
-                {/* <Slide className="slideDrawerContent" direction="left" in={true} mountOnEnter unmountOnExit> */}
-                    <div className="profileContainerInDrawer">
-                        <div className="imageContainerInDrawer">
-                            <img src="../../assets/clock.png" style={{
-                                boxShadow: "0px 5px 25px 0px rgba(0,0,0,0.2)", width: "45%", border: "3px solid #fff", borderRadius: "50%"
-                            }} />
-                        </div>
-                        <div className="profileTextContainer">
-                            <div className="nameContainer">
-                                <Typography style={{ marginBottom: "0px", fontFamily: "sans-serif", fontSize: "x-large" }}>Girish</Typography>
-                                <Typography >UI UX Developer</Typography>
-                            </div>
-                        </div>
-                        <div className="iconsInProfileDrawer">
-                            <IconButton><FacebookIcon color="action" /></IconButton>
-                            <IconButton><TwitterIcon color="action" /></IconButton>
-                            <IconButton><InstagramIcon color="action" /></IconButton>
-                        </div>
-                        <div className="addressContainer">
-                            <p style={{ color: "#6c757d!important" }}>795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</p>
-                        </div>
-                        <div className="followDataContainer">
-                            <div className="followContainer">
-                                <h3 >1M</h3>
-                                <p style={{ color: "#6c757d!important",fontSize:14 }}>Followers</p>
-                            </div>
-                            <div><h3>1K</h3>
-                                <p style={{ color: "#6c757d!important",fontSize:14  }}>Following</p></div>
-                            <div>
-                                <h3>100
-                                </h3>
-                                <p style={{ color: "#6c757d!important",fontSize:14  }}>Posts</p></div>
+        <div className="slideDrawerContent" >
+            <Slide direction="left" in={true} mountOnEnter unmountOnExit>
+                <div className="profileContainerInDrawer">
+                    <div className="imageContainerInDrawer">
+                        <img src="../../assets/clock.png" style={{
+                            boxShadow: "0px 5px 25px 0px rgba(0,0,0,0.2)", width: "45%", border: "3px solid #fff", borderRadius: "50%"
+                        }} />
+                    </div>
+                    <div className="profileTextContainer">
+                        <div className="nameContainer">
+                            <Typography style={{ marginBottom: "0px", fontFamily: "sans-serif", fontSize: "x-large" }}>Girish</Typography>
+                            <Typography >UI UX Developer</Typography>
                         </div>
                     </div>
-            </div>
+                    <div className="iconsInProfileDrawer">
+                        <IconButton><FacebookIcon color="action" /></IconButton>
+                        <IconButton><TwitterIcon color="action" /></IconButton>
+                        <IconButton><InstagramIcon color="action" /></IconButton>
+                    </div>
+                    <div className="addressContainer">
+                        <p style={{ color: "#6c757d!important" }}>795 Folsom Ave, Suite 600 San Francisco, CADGE 94107</p>
+                    </div>
+                    <div className="followDataContainer">
+                        <div className="followContainer">
+                            <h3 >1M</h3>
+                            <p style={{ color: "#6c757d!important", fontSize: 14 }}>Followers</p>
+                        </div>
+                        <div><h3>1K</h3>
+                            <p style={{ color: "#6c757d!important", fontSize: 14 }}>Following</p></div>
+                        <div>
+                            <h3>100
+                                </h3>
+                            <p style={{ color: "#6c757d!important", fontSize: 14 }}>Posts</p></div>
+                    </div>
+                </div>
+            </Slide>
+        </div>
         return (
             <div >
                 <MuiThemeProvider theme={theme}>

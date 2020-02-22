@@ -8,8 +8,10 @@ import NotificationsIcon from '@material-ui/icons/Notifications';
 import SearchIcon from '@material-ui/icons/Search';
 import SwapHorizIcon from '@material-ui/icons/SwapHoriz';
 import PowerSettingsNewIcon from '@material-ui/icons/PowerSettingsNew';
-import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBDropdown,
-    MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBIcon } from "mdbreact";
+import {
+    MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBDropdown,
+    MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem, MDBIcon
+} from "mdbreact";
 import SettingsIcon from '@material-ui/icons/Settings';
 import { Icon, Typography, AppBar, MuiThemeProvider, createMuiTheme, IconButton, InputBase } from '@material-ui/core'
 import "../../less/styles.less"
@@ -25,9 +27,9 @@ const theme = createMuiTheme({
                 color: "#ffff"
             }
         },
-        MuiAppBar:{
-            root:{
-                width:"79%",
+        MuiAppBar: {
+            root: {
+                width: "79%",
                 backgroundColor: "#8c99e0"
             },
             colorPrimary: {
@@ -49,26 +51,26 @@ class AppBarComponent extends Component {
                 <MuiThemeProvider theme={theme}>
                     <AppBar className="mainNavBar">
                         <div className="appBarContents">
-                        <div className="appBarLeftContents">
-                            <Typography style={{fontSize:20}}>OREO</Typography>
-                            <IconButton><SwapHorizIcon style={{ fontSize: 18 }} /></IconButton>
-                            <IconButton >
-                                <EventIcon style={{ fontSize: 18 }}/>
-                            </IconButton>
-                            <IconButton><MailIcon style={{ fontSize: 18 }}/></IconButton>
-                            <IconButton><RecentActorsIcon style={{ fontSize: 18 }}/></IconButton>
-                            <IconButton><NotificationsIcon style={{ fontSize: 18 }}/></IconButton>
-                            <IconButton><FlagIcon style={{ fontSize: 18 }}/></IconButton>
-                            <div className="searchBar" style={{borderRadius:25}}>
-                            <InputBase placeholder="Search">
-                                <SearchIcon style={{ fontSize: 18 }} className="searchIconInInput" />
-                            </InputBase>
-                            </div>
+                            <div className="appBarLeftContents">
+                                <Typography style={{ fontSize: 20 }}>OREO</Typography>
+                                <IconButton><SwapHorizIcon style={{ fontSize: 18 }} /></IconButton>
+                                <IconButton >
+                                    <EventIcon style={{ fontSize: 18 }} />
+                                </IconButton>
+                                <IconButton><MailIcon style={{ fontSize: 18 }} /></IconButton>
+                                <IconButton><RecentActorsIcon style={{ fontSize: 18 }} /></IconButton>
+                                <IconButton><NotificationsIcon style={{ fontSize: 18 }} /></IconButton>
+                                <IconButton><FlagIcon style={{ fontSize: 18 }} /></IconButton>
+                                <div className="searchBar" style={{ borderRadius: 25 }}>
+                                    <InputBase placeholder="Search">
+                                        <SearchIcon style={{ fontSize: 18 }} className="searchIconInInput" />
+                                    </InputBase>
+                                </div>
                             </div>
                             <div className="headerContentRight">
-                            <IconButton><PowerSettingsNewIcon style={{ fontSize: 18 }}/></IconButton>
-                            <IconButton><SettingsIcon style={{ fontSize: 18, }}/></IconButton>
-                        </div>
+                                <IconButton><PowerSettingsNewIcon style={{ fontSize: 18 }} /></IconButton>
+                                <IconButton><SettingsIcon style={{ fontSize: 18, }} /></IconButton>
+                            </div>
                         </div>
                     </AppBar>
                 </MuiThemeProvider>

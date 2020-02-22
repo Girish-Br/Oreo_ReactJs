@@ -14,54 +14,59 @@ class CardsInHome extends Component {
             imageOver: false
         }
         this.handleMouseOver = this.handleMouseOver.bind(this)
-        }
+    }
     handleMouseOver(event) {
-        console.log("sdfdsagfdgg",event)
+        console.log("sdfdsagfdgg", event)
         this.setState({ imageOver: 12 })
-        console.log("sdfdsagfdgg",this.state.imageOver)
+        console.log("sdfdsagfdgg", this.state.imageOver)
 
     }
     render() {
         console.log("safdsf", images.image)
         let cards = images.image.map(item => {
             return (
-            //    ! this.state.imageOver ? 
-               <Card 
+                //    ! this.state.imageOver ? 
+                <Card
                     className="cardsInProduct" style={{ margin: "2%", padding: "2%" }}>
-                    <div style={{ display: "flex", justifyContent: "center",zIndex:2000 }}>
-                        <img elevation={4} className="imageInDashboard"  onMouseOver={this.handleMouseOver} src={item} width="90%" height="50%" />
+                    <div style={{ display: "flex", justifyContent: "center", zIndex: 2000 }}>
+                        <img style={{ borderRadius: "10px" }} elevation={4} className="imageInDashboard" onMouseOver={this.handleMouseOver} src={item} width="90%" height="50%" />
                     </div>
                 </Card>
-                    // :
-                    // <div>
-                    //     <Card onMouseOver={this.handleMouseOver}
-                    //         className="cardsInProduct" style={{ margin: "2%", padding: "2%" }}>
-                    //         <div style={{ display: "flex", justifyContent: "center" }}>
-                    //             <img className="imagesInDashboard" onMouseOver={this.handleMouseOver} src={item} width="90%" height="50%" />
-                    //         </div>
-                    //     </Card>
-                    //     <Typography>asfds.</Typography>
-                    // </div>
+                // :
+                // <div>
+                //     <Card onMouseOver={this.handleMouseOver}
+                //         className="cardsInProduct" style={{ margin: "2%", padding: "2%" }}>
+                //         <div style={{ display: "flex", justifyContent: "center" }}>
+                //             <img className="imagesInDashboard" onMouseOver={this.handleMouseOver} src={item} width="90%" height="50%" />
+                //         </div>
+                //     </Card>
+                //     <Typography>asfds.</Typography>
+                // </div>
             )
         })
         return (
             <div className="productContainer">
-                {/* <div style={{display:"flex",justifyContent:"space-between"}}>
+                <div style={{ display: "flex", justifyContent: "space-between",backgroundColor:"#8c99e0",width:"102%",padding:"3%"}}>
                     <div>
-                    <p style={{color:"#fffff"}}>Product</p>
-                    <p>Welcome To Oreo</p>
-                    </div>
-                    <div>
-                        <p>Oreo</p>
-                        </div>
-                    <div>
-                        <Typography></Typography>
-                        </div>
-                    </div> */}
-                <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap" }}>
-                    {cards}
+                        <p style={{
+                            color: "#ffffff",
+                            fontSize:"x-large"
+                           }}>Product</p>
+                    <p style={{
+                            color: "#ffffff",
+                           }}>Welcome To Oreo</p>
+                </div>
+                <div style={{backgroundColor:""}}>
+                    <p style={{
+                            color: "#ffffff",
+                            fontSize:"large"
+                           }}>Oreo/e-Commerce/Product</p>
                 </div>
             </div>
+            <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap",marginTop: "-8%",paddingLeft:"10%" }}>
+                {cards}
+            </div>
+            </div >
         )
     }
 }

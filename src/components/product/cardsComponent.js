@@ -46,24 +46,26 @@ class CardsInHome extends Component {
         })
         return (
             <div className="productContainer">
-                <div style={{ display: "flex", justifyContent: "space-between",backgroundColor:"#8c99e0",width:"102%",padding:"3%"}}>
+                <div style={{ display: "flex", justifyContent: "space-between",backgroundColor:"#8c99e0",width:"95%",padding:"3%"}}>
                     <div>
-                        <p style={{
+                        <Typography style={{
                             color: "#ffffff",
-                            fontSize:"x-large"
-                           }}>Product</p>
-                    <p style={{
+                            fontSize:"larger"
+                           }}>Product</Typography>
+                    <Typography style={{
                             color: "#ffffff",
-                           }}>Welcome To Oreo</p>
+                            marginBottom:"20%",
+                            fontSize:"small"
+                           }}>Welcome To Oreo</Typography>
                 </div>
                 <div style={{backgroundColor:""}}>
-                    <p style={{
+                    <h5 style={{
                             color: "#ffffff",
                             fontSize:"large"
-                           }}>Oreo/e-Commerce/Product</p>
+                           }}>Oreo/e-Commerce/Product</h5>
                 </div>
             </div>
-            <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap",marginTop: "-8%",paddingLeft:"10%" }}>
+            <div style={{ display: "flex", flexDirection: "row", flexWrap: "wrap",marginTop: "-7%",paddingLeft:"10%" }}>
                 {cards}
             </div>
             </div >
